@@ -23,6 +23,7 @@ body{
 .container h2{
     text-align: center;
     padding: 10px;
+    color: white;
 }
 
 .container p{
