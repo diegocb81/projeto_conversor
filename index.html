@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="shortcut icon" href="img/icone.ico" type="image-x/png" >
 </head>
 <body>
@@ -17,37 +17,16 @@
                 <label>Celsius</label>
                 <input type="number" id="inputCelsius" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
             </p>
-            <p>Fahrenheit:<span id="outputFahrenheit"></span></p>
+            <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
         </div><!--box-->
     </div><!--container-->
-
-    <div class="container">
-        <h2>Conversor de Temperatura</h2>
-        <p>Digite a temperatura em Celsius para converter em Kelvin:</p>
-        <div class="box">
-            <p>
-                <label>Celsius</label>
-                <input type="number" id="inputCelsius" placeholder="Celsius" oninput="temperatureConverter(this.value)"
-                    onchange="temperatureConverter(this.value)">
-            </p>
-            <p>Kelvin:<span id="outputKelvin"></span></p>
-        </div>
-        <!--box-->
-    </div>
-    <!--container-->
-    <script>
-        function temperatureConverter(valNum){
-            valNum = parseFloat(valNum);
-            document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
-        }
-    </script>
 
     <script>
         function temperatureConverter(valNum) {
             valNum = parseFloat(valNum);
-            document.getElementById("outputKelvin").innerHTML = valNum + 273.15;
+            document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
         }
     </script>
-    
+ 
 </body>
 </html>
